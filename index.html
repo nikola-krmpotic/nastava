@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forme i obrazci</title>
+</head>
+<body>
+   <h1>rad sa obrascima</h1> 
+   <form action="includes/registracija.php" method="post" enctype="multipart/form-data">
+    <fieldset><legend>Registracija</legend>
+    <label for="korisničko_ime">Korisničko ime: *</label><br/>
+    <input type="text" name="korisničko_ime" id="korisničko_ime" required autofocus placeholder="korisničko ime" pattern="[A-Za-z0-9]{3,10}" /> <br/>
+    <label for="lozinka">lozinka: *</label><br/>
+    <input type="password" name="lozinka" id="lozinka" required placeholder="lozinka" /><br/>
+    <label>spol: *</label><br/>
+    <label for="m">muško</label>
+    <input type="radio" name="spol" id="m" value="musko" required />
+    <label for="z">žensko</label>
+    <input type="radio" name="spol" id="z" value="zensko" required /><br/><br/>
+    <label for="fotografija"> vaša fotografiija: </label>
+    <input type="file" name="fotografija" id="fotogradija" multiple /><br/><br/>
+    
+    <label for="struk">Stručna sprema</label><br/>
+    <select name="sprema" id="struk">
+        <option value="1">NSS</option>
+        <option value="2">sSS</option>
+        <option value="3">všS</option>
+        <option value="4">vSS</option>
+    </select>
+    <br/><br/>
+    <label for="struk2">stručna sprema:</label><br/>
+    <input type="text" name="sprema2" id="struk2" list="kratice" />
+    <datalist id="kratice">
+        <option value="NSS" />
+        <option value="sSS" />
+        <option value="všS" />
+        <option value="vSS" />
+    </datalist>
+    <br/>
+    <label for="boja">omiljena boja</label><br/>
+    <input type="color" name="boja" id="boja"  />
+    
+    <label for="datum">datum rođenja</label><br/>
+    <input type="date" name="datum" id="datum" required min="2000-01-01" /><br/>
+    <label for="email">emajl (ako više - odvojiti zarezom):</label><br/>
+    <input type="email" name="email" id="email" multiple /><br/><br/>
+    <label for="razredi">br razreda?!</label><br/>
+   
+    
+    <label for="zato">zašto baš ja, od svih ljudi na ovom svijetu?!</label><br/>
+     <tekstarea name="zato" id="zato" rows="6" cols="32"></tekstarea>
+     <br/><br/>
+    <input type="submit" value="u redu" /> 
+     <input type="submit" value="administrator" formnovalidate/>
+    </fieldset>
+
+   </form>
+</body>
+</html>
